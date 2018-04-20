@@ -1,0 +1,109 @@
+$white: #FBFFFE;
+$black: #1B1B1E;
+$primary-color: #2BA84A;
+$info-color: #0094C6;
+$error-color: #F61067;
+$radius: 3px;
+
+body {
+  background: $white;
+}
+
+.App {
+  width: 100%;
+}
+.logo {
+  text-align: center;
+}
+.team-list {
+  list-style: none;
+  margin: 2rem auto;
+  padding: 0;
+  width: 60%;
+}
+.teammate {
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: $radius;
+  background: $white;
+  transition: box-shadow .15s ease-in-out;
+  position: relative;
+  &--active {
+    box-shadow: 0 0 16px 2px rgba(0,0,0,.15);
+    z-index: 10;
+
+    .teammate__info {
+      display: none;
+    }
+    .teammate__nominate-panel {
+      display: flex;
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__name {
+    font-weight: 600;
+    margin: 0 .5rem 0 0;
+  }
+  &__nominations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $info-color;
+    padding: .5rem;
+    color: $white;
+    width: .5rem;
+    height: .5rem;
+    font-size: .75rem;
+    border-radius: 50%;
+    font-style: normal;
+  }
+  &__nominate {
+    align-self: flex-end;
+    margin-left: auto;
+    background: $primary-color;
+    color: $white;
+    font-size: .875em;
+    padding: .75rem;
+    border-radius: $radius;
+    cursor: pointer;
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+    &-textarea {
+      width: 100%;
+      min-height: 120px;
+      font-size: 1em;
+    }
+    &-submit {
+      margin: 1rem auto;
+      background: $primary-color;
+      color: $white;
+      padding: 1rem;
+      border-radius: $radius;
+      cursor: pointer;
+      &:hover {
+        background: darken($primary-color, 10%);
+      }
+    }
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1rem;
+      cursor: pointer;
+    }
+  }
+  &__nominate-panel {
+    display: none;
+    flex-flow: row wrap;
+    h2 {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
