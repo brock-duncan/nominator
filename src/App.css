@@ -10,8 +10,7 @@ body {
 .team-list {
   list-style: none;
   margin: 2rem auto;
-  padding: 0;
-  width: 60%; }
+  padding: 0; }
 
 .teammate {
   padding: 1rem;
@@ -60,7 +59,8 @@ body {
     .teammate__nominate-textarea {
       width: 100%;
       min-height: 120px;
-      font-size: 1em; }
+      font-size: 1em;
+      text-align: center; }
     .teammate__nominate-submit {
       margin: 1rem auto;
       background: #2BA84A;

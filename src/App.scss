@@ -19,7 +19,7 @@ body {
   list-style: none;
   margin: 2rem auto;
   padding: 0;
-  width: 60%;
+  // width: 60%;
 }
 .teammate {
   padding: 1rem;
@@ -31,7 +31,6 @@ body {
   &--active {
     box-shadow: 0 0 16px 2px rgba(0,0,0,.15);
     z-index: 10;
-
     .teammate__info {
       display: none;
     }
@@ -77,6 +76,7 @@ body {
       width: 100%;
       min-height: 120px;
       font-size: 1em;
+      text-align: center;
     }
     &-submit {
       margin: 1rem auto;
